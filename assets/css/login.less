@@ -1,0 +1,56 @@
+html,
+body {
+    background: url(../images/login_bg.jpg);
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+// 头部logo
+.header {
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+// 内容模块-登录
+.content {
+    box-sizing: border-box;
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    // left: 50%;
+    // top: 160px;
+    // margin-left: -200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    // 标题
+    .title {
+        margin: 20px 0;
+    }
+
+    // 表单
+    .layui-form {
+        padding: 0 20px;
+    }
+    // 前往注册按钮
+   .registration {
+       display: flex;
+       justify-content: flex-end;
+   }
+}
+
+// 表单设置字体图标
+.layui-form-item {
+    position: relative;
+    i {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+
+    .layui-input {
+        padding-left: 30px;
+    }
+}
