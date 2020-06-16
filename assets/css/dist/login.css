@@ -26,7 +26,8 @@ body {
 .content .layui-form {
   padding: 0 20px;
 }
-.content .registration {
+.content .registration,
+.content .login {
   display: flex;
   justify-content: flex-end;
 }
@@ -40,4 +41,10 @@ body {
 }
 .layui-form-item .layui-input {
   padding-left: 30px;
+}
+#login {
+  display: block;
+}
+#registration {
+  display: none;
 }

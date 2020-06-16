@@ -1,7 +1,7 @@
 "use strict";
 
 $(function () {
-  // 登录时间
+  // 登录事件
   (function () {
     // layui是全局对象 可以找到form表单
     var form = layui.form; // 基于LayUI的自定义验证规则
@@ -30,6 +30,18 @@ $(function () {
           }
         }
       });
+    });
+  })(); // 点击前往注册+点击前往登录
+
+
+  (function () {
+    $('.registration a').click(function () {
+      $('#login').hide();
+      $('#registration').show();
+    });
+    $('.login a').click(function () {
+      $('#login').show();
+      $('#registration').hide();
     });
   })();
 });
