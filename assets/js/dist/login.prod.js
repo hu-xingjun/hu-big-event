@@ -1,0 +1,1 @@
+"use strict";$(function(){layui.form.verify({uname:[/^[\S]{6,12}$/,"密码必须是6-12位字符"],password:[/^[\d]{6}$/,"密码必须是6位数字"]}),$(".layui-form").submit(function(t){t.preventDefault();var a=$(this).serialize();console.log(a),$.ajax({type:"post",url:"http://ajax.frontend.itheima.net/api/login ",data:a,success:function(t){0===t.status&&(location.href="./index.html")}})})});
