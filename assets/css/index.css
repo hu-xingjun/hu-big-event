@@ -1,0 +1,15 @@
+.layui-header .i-icon {
+  margin-left: 20px;
+  position: relative;
+}
+.layui-header .i-icon i {
+  position: absolute;
+}
+.layui-side-scroll .layui-nav-item {
+  position: relative;
+  margin-left: 20px;
+}
+.layui-side-scroll .layui-nav-item i {
+  position: absolute;
+  z-index: 3;
+}
