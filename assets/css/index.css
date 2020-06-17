@@ -1,15 +1,20 @@
-.layui-header .i-icon {
-  margin-left: 20px;
-  position: relative;
+.left-img {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 50px;
+  color: #fff;
 }
-.layui-header .i-icon i {
-  position: absolute;
+.left-img .text-img {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #419488;
+  border-radius: 50%;
+  font-size: 18px;
 }
-.layui-side-scroll .layui-nav-item {
-  position: relative;
-  margin-left: 20px;
-}
-.layui-side-scroll .layui-nav-item i {
-  position: absolute;
-  z-index: 3;
+.layui-body iframe {
+  height: 100%;
+  width: 100%;
 }
