@@ -34,6 +34,8 @@ $(function () {
         data: formData,
         success: function success(res) {
           if (res.status === 0) {
+            // 登录成功则保存登录成功标志到本地存储
+            localStorage.setItem('mytoken', res.token);
             location.href = './index.html';
           }
         }

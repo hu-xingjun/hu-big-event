@@ -1,0 +1,1 @@
+"use strict";$(function(){localStorage.getItem("mytoken")||(location.href="./login.html")});
