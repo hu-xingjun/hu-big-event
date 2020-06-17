@@ -1,10 +1,22 @@
+.layui-layout-right img {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
 .left-img {
   height: 50px;
   line-height: 50px;
-  padding-left: 50px;
+  padding-left: 20px;
   color: #fff;
 }
-.left-img .text-img {
+.left-img img {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.text-img {
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -13,6 +25,7 @@
   background-color: #419488;
   border-radius: 50%;
   font-size: 18px;
+  margin-right: 5px;
 }
 .layui-body iframe {
   height: 100%;

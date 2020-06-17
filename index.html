@@ -19,7 +19,9 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                        <!-- <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> -->
+                        <span class="text-img">1</span>
+                        <span id="top-username"></span>
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a href="">基本资料</a></dd>
@@ -40,9 +42,12 @@
             <div class="layui-side-scroll">
                 <!-- 左侧导航栏欢迎部分 -->
                 <a href="javascript:;" class="left-img">
-                    <span class="text-img">L</span>
+                    <span class="text-img">1</span>
                     <!-- <img src="" class="layui-nav-img" alt=""> -->
-                    <span>欢迎你&nbsp;&nbsp;xxxx</span>
+                    <span>
+                        欢迎你&nbsp;&nbsp;
+                        <span id="left-username"></span>
+                    </span>
                 </a>
                 <!-- 导航 -->
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="test">
@@ -102,7 +107,7 @@
         <div class="layui-body">
             <!-- 内容主体区域 -->
             <div style="height: 100%;">
-                <!-- <iframe src="./login.html" frameborder="0"></iframe> -->
+                <iframe src="./login.html" frameborder="0"></iframe>
             </div>
         </div>
 
