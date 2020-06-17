@@ -11,6 +11,7 @@ $(function() {
             type: 'get',
             url: 'http://ajax.frontend.itheima.net/my/userinfo',
             headers: {
+                // 接口文档表示 my/ 类必须添加请求头
                 Authorization: localStorage.getItem('mytoken')
             },
             success: function(res) {
@@ -35,6 +36,21 @@ $(function() {
                     }
                 }
             }
+        })
+    })();
+
+    // 退出功能
+    (function() {
+        $('#withdrawal').click(function() {
+            // 显示弹框
+            layer.confirm('确定要退出吗?', { icon: 3, title: '提示' }, function(index) {
+                // 确定退出 执行 清除token (清空放回成功标志)
+                localStorage.removeItem(mytoken);
+                // 跳转至登录界面
+                location.href = './login.html'
+
+                layer.close(index);
+            });
         })
     })();
 });
