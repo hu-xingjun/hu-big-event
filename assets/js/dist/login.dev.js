@@ -1,47 +1,46 @@
 "use strict";
 
 $(function () {
-  // 登录事件
+  // 切换登录-注册页
   (function () {
-    // layui是全局对象 可以找到form表单
-    var form = layui.form; // 基于LayUI的自定义验证规则
+    $('.travel_registra a').click(function () {
+      $('#login').hide();
+      $('#registra').show();
+    });
+    $('.travel_login a').click(function () {
+      $('#login').show();
+      $('#registra').hide();
+    });
+  })(); // 登录界面 登录按钮
+
+
+  (function () {
+    // layui是全部变量 可以找到form表单
+    var form = layui.form; // 自定义表单验证
 
     form.verify({
-      uname: [/^[\S]{6,12}$/, '密码必须是6-12位字符'],
-      password: [/^[\d]{6}$/, '密码必须是6位数字']
-    }); // form提交表单
-
-    $(".layui-form").submit(function (e) {
+      uname: [/^[\S]{6,12}$/, '请输入6-12位的字符'],
+      pswd: [/^[\w]{6,18}$/, '请输入6-8位的字母,数字及下划线']
+    });
+    $('.layui-form').submit(function (e) {
       // 阻止默认事件
       e.preventDefault(); // 获取表单所有数据
 
-      var formData = $(this).serialize(); // 提交表单之前要进行表单验证
-
-      console.log(formData); // 调用后台接口
+      var formData = $(this).serialize(); // 调用接口
 
       $.ajax({
         type: 'post',
-        url: 'http://ajax.frontend.itheima.net/api/login ',
+        url: 'http://ajax.frontend.itheima.net/api/login',
         data: formData,
         success: function success(res) {
           if (res.status === 0) {
-            // 跳转打开页面
             location.href = './index.html';
           }
         }
       });
     });
-  })(); // 点击前往注册+点击前往登录
+  })(); // 注册界面 注册按钮
 
 
-  (function () {
-    $('.registration a').click(function () {
-      $('#login').hide();
-      $('#registration').show();
-    });
-    $('.login a').click(function () {
-      $('#login').show();
-      $('#registration').hide();
-    });
-  })();
+  (function () {})();
 });
