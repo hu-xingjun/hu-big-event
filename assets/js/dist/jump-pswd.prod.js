@@ -1,0 +1,1 @@
+"use strict";$(function(){layui.form.verify({oldsame:function(e){if(e===$("#oldPwd").val())return"新旧密码不能一致"},newsame:function(e){if(e!==$("#newPwd").val())return"两次密码输入不一致,请重新输入"}}),$("form").submit(function(e){e.preventDefault();var t=$(this).serialize();$.ajax({type:"post",url:"my/updatepwd",data:t,success:function(e){e.status,layer.msg(e.message)}})})});
