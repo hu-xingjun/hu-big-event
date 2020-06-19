@@ -21,12 +21,17 @@ $(function () {
     // 阻止默认事件
     e.preventDefault(); // 获取表单所有的数据
 
-    var formData = $(this).serialize();
+    var formData = $(this).serializeArray(); // 过滤掉数据中的username (接口文档表示只需要3个)
+
+    formData = formData.filter(function (item) {
+      return item.name !== 'username';
+    });
     $.ajax({
       type: 'post',
       url: 'my/userinfo',
       data: formData,
       success: function success(res) {
+        console.log(res);
         layer.msg(res.message);
       }
     });

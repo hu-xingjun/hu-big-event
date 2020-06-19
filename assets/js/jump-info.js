@@ -7,6 +7,7 @@ $(function() {
             type: 'get',
             url: 'my/userinfo',
             success: function(res) {
+
                 // 必须跟表单属性 lay-filter的值一致"info_form"
                 form.val('info_form', res.data)
             }
@@ -21,13 +22,17 @@ $(function() {
         e.preventDefault();
 
         // 获取表单所有的数据
-        var formData = $(this).serialize();
-
+        var formData = $(this).serializeArray();
+        // 过滤掉数据中的username (接口文档表示只需要3个)
+        formData = formData.filter(function(item) {
+            return item.name !== 'username'
+        })
         $.ajax({
             type: 'post',
             url: 'my/userinfo',
             data: formData,
             success: function(res) {
+                console.log(res)
                 layer.msg(res.message)
             }
         })

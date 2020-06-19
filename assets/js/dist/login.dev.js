@@ -65,6 +65,7 @@ $(function () {
         success: function success(res) {
           if (res.status === 0) {
             $('.travel_login a').click();
+            layer.msg(res.message);
           } else {
             // 如果注册失败
             // res.message
