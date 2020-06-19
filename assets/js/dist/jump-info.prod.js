@@ -1,0 +1,1 @@
+"use strict";$(function(){var a=layui.form;$.ajax({type:"get",url:"my/userinfo",success:function(s){a.val("info_form",s.data)}}),$("form").submit(function(s){s.preventDefault();var a=$(this).serialize();$.ajax({type:"post",url:"my/userinfo",data:a,success:function(s){layer.msg(s.message)}})})});
