@@ -9,11 +9,11 @@ $(function() {
     (function() {
         $.ajax({
             type: 'get',
-            url: 'http://ajax.frontend.itheima.net/my/userinfo',
-            headers: {
-                // 接口文档表示 my/ 类必须添加请求头
-                Authorization: localStorage.getItem('mytoken')
-            },
+            url: 'my/userinfo',
+            // headers: {
+            //     // 接口文档表示 my/ 类必须添加请求头
+            //     Authorization: localStorage.getItem('mytoken')
+            // },
             success: function(res) {
                 if (res.status === 0) {
                     var info = res.data;

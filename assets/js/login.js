@@ -37,7 +37,7 @@ $(function() {
             // 调用登录接口
             $.ajax({
                 type: 'post',
-                url: 'http://ajax.frontend.itheima.net/api/login',
+                url: 'api/login',
                 data: formData,
                 success: function(res) {
                     if (res.status === 0) {
@@ -64,7 +64,7 @@ $(function() {
             // 调用注册接口
             $.ajax({
                 type: 'post',
-                url: 'http://ajax.frontend.itheima.net/api/reguser',
+                url: 'api/reguser',
                 data: formData,
                 success: function(res) {
                     if (res.status === 0) {
