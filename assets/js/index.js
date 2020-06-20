@@ -6,7 +6,7 @@ $(function() {
     };
 
     // 获取用户信息
-    (function() {
+    function changeImg() {
         $.ajax({
             type: 'get',
             url: '/my/userinfo',
@@ -29,15 +29,29 @@ $(function() {
                         // 存在头像数据
                         // prev() 当前元素前面的元素 prevAll()前面的所有元素
                         // prepend() 当前元素开头插入元素
+                        // 1. 删除模板头像
                         $('#left-username').parent().prev().remove();
                         $('#top-username').prev().remove();
-                        $('#left-username').parent().prepend('<img src=' + info.user_pic + '>')
-                        $('#top-username').prepend('<img src=' + info.user_pic + '>')
+                        // 2. 增加img标签
+                        $('#left-username')
+                            .parent()
+                            .find()
+                            .remove()
+                            .end()
+                            .prepend('<img src=' + info.user_pic + '>')
+                        $('#top-username')
+                            .prepend('<img src=' + info.user_pic + '>')
                     }
                 }
             }
         })
-    })();
+    }
+    changeImg();
+
+    // 利用Jq插件 将changeImg方法保存在$上
+    $.changeImg = changeImg;
+
+
 
     // 退出功能
     (function() {

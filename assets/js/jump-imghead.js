@@ -38,16 +38,18 @@ $(function() {
                 height: 100
             }).toDataURL('image/png') //将画布上的内容转为base64格式
 
-        console.log(cutUrl)
-
         // 更换头像接口文档
         $.ajax({
             type: 'post',
             url: '/my/update/avatar',
-            data: cutUrl,
+            data: {
+                acatar: cutUrl
+            },
             success: function(res) {
                 if (res.status === 0) {
-                    layer.msg(res.message)
+                    layer.msg(res.message);
+                    // 调用父窗口的更换头像方法
+                    window.parent.$.changeImg()
                 }
             }
         })
