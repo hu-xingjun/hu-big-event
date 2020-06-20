@@ -1,1 +1,1 @@
-"use strict";
+"use strict";$(function(){$(".cropper-box img").cropper({aspectRatio:1,preview:".img-preview"})});
