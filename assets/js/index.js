@@ -35,11 +35,14 @@ $(function() {
                         // 2. 增加img标签
                         $('#left-username')
                             .parent()
-                            .find()
+                            .prev('img')
                             .remove()
                             .end()
                             .prepend('<img src=' + info.user_pic + '>')
                         $('#top-username')
+                            .prev('img')
+                            .remove()
+                            .end()
                             .prepend('<img src=' + info.user_pic + '>')
                     }
                 }

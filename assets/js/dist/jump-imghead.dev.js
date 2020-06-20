@@ -39,7 +39,7 @@ $(function () {
       type: 'post',
       url: '/my/update/avatar',
       data: {
-        acatar: cutUrl
+        avatar: cutUrl
       },
       success: function success(res) {
         if (res.status === 0) {

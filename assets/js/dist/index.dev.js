@@ -36,8 +36,8 @@ $(function () {
             $('#left-username').parent().prev().remove();
             $('#top-username').prev().remove(); // 2. 增加img标签
 
-            $('#left-username').parent().find().remove().end().prepend('<img src=' + info.user_pic + '>');
-            $('#top-username').prepend('<img src=' + info.user_pic + '>');
+            $('#left-username').parent().prev('img').remove().end().prepend('<img src=' + info.user_pic + '>');
+            $('#top-username').prev('img').remove().end().prepend('<img src=' + info.user_pic + '>');
           }
         }
       }
