@@ -13,7 +13,7 @@ $(function () {
   (function () {
     $.ajax({
       type: 'get',
-      url: 'my/userinfo',
+      url: '/my/userinfo',
       // headers: {
       //     // 接口文档表示 my/ 类必须添加请求头
       //     Authorization: localStorage.getItem('mytoken')

@@ -37,7 +37,7 @@ $(function() {
             // 调用登录接口
             $.ajax({
                 type: 'post',
-                url: 'api/login',
+                url: '/api/login',
                 data: formData,
                 success: function(res) {
                     if (res.status === 0) {
@@ -64,7 +64,7 @@ $(function() {
             // 调用注册接口
             $.ajax({
                 type: 'post',
-                url: 'api/reguser',
+                url: '/api/reguser',
                 data: formData,
                 success: function(res) {
                     if (res.status === 0) {

@@ -6,7 +6,7 @@ $(function () {
   function getUsersinfo() {
     $.ajax({
       type: 'get',
-      url: 'my/userinfo',
+      url: '/my/userinfo',
       success: function success(res) {
         // 必须跟表单属性 lay-filter的值一致"info_form"
         form.val('info_form', res.data);
@@ -28,7 +28,7 @@ $(function () {
     });
     $.ajax({
       type: 'post',
-      url: 'my/userinfo',
+      url: '/my/userinfo',
       data: formData,
       success: function success(res) {
         console.log(res);

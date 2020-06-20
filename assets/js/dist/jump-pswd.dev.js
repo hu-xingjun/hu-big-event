@@ -26,7 +26,7 @@ $(function () {
     var formData = $(this).serialize();
     $.ajax({
       type: 'post',
-      url: 'my/updatepwd',
+      url: '/my/updatepwd',
       data: formData,
       success: function success(res) {
         if (res.status === 0) {

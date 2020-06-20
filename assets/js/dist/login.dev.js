@@ -35,7 +35,7 @@ $(function () {
 
       $.ajax({
         type: 'post',
-        url: 'api/login',
+        url: '/api/login',
         data: formData,
         success: function success(res) {
           if (res.status === 0) {
@@ -60,7 +60,7 @@ $(function () {
 
       $.ajax({
         type: 'post',
-        url: 'api/reguser',
+        url: '/api/reguser',
         data: formData,
         success: function success(res) {
           if (res.status === 0) {
